@@ -3,17 +3,17 @@
 <h1>Todo Lists</h1>
 
 <table>
-  <thead>
+  <head>
     <tr>
       <th>Title</th>
       <th>Description</th>
       <th colspan="3"></th>
     </tr>
-  </thead>
+  </head>
 
-  <tbody>
-    <% @todo_lists.each do |todo_list| %>
-      <tr>
+  <body>
+    <% @todo_lists.each do %>
+      <br>
         <td><%= todo_list.title %></td>
         <td><%= todo_list.description %></td>
         <td><%= link_to 'Show', todo_list %></td>
@@ -21,7 +21,7 @@
         <td><%= link_to 'Destroy', todo_list, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
-  </tbody>
+  </body>
 </table>
 
 <br>
